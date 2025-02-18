@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Book Collection</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="show">
-        <button onclick="rele()"> show</button>
+    <nav class="navbar">
+        <div class="logo">Booksky</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Report</a></li>
+        </ul>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search books...">
+            <button class="search-btn">🔍</button>
+        </div>
+    </nav>
+
+    <div class="book-container" id="bookContainer">
+        <!-- Books will be dynamically added here -->
     </div>
-    <div class="blackbox">
-        <div class="content">
-            <h1>Rich Dad Poor Dad</h1>
-            <p>Rich Dad Poor Dad is a 1997 book written by Robert T. Kiyosaki and Sharon Lechter. It advocates the importance of financial literacy (financial education), financial independence and building wealth through investing in assets,
-                 real estate investing, starting and owning businesses, as well as increasing one's financial intelligence</p>
-            <button class="close">close</button>
+
+    <button class="add-btn" id="addBookBtn">➕</button>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <h2 id="popupTitle"></h2>
+            <p id="popupDescription"></p>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
