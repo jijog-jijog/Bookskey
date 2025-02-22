@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", () => {
     const bookContainer = document.getElementById("bookContainer");
     const addBookBtn = document.getElementById("addBookBtn");
@@ -6,10 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const closePopup = document.getElementById("closePopup");
     const popupTitle = document.getElementById("popupTitle");
     const popupDescription = document.getElementById("popupDescription");
+    const themeToggle = document.getElementById("themeToggle");
 
     const books = [
         { title: "Rich Dad Poor Dad", description: "A book about financial education and investing." },
-        { title: "Atomic Habits", description: "A book about building good habits and breaking bad ones." }
+        { title: "Atomic Habits", description: "A book about building good habits and breaking bad ones." },
+        { title: "The 5 AM Club", description: "A book about morning routines for success." },
+        { title: "Deep Work", description: "A book about focused success in a distracted world." },
+        { title: "Think and Grow Rich", description: "A classic on mindset and financial success." }
     ];
 
     function renderBooks() {
@@ -42,6 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
             books.push({ title: newTitle, description: newDescription });
             renderBooks();
         }
+    });
+
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
     });
 
     renderBooks();
