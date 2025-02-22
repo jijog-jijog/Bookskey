@@ -1,8 +1,8 @@
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
-    const bookContainer = document.getElementById("bookContainer");
-    const addBookBtn = document.getElementById("addBookBtn");
-    const popup = document.getElementById("popup");
+    const bookContainer = document.getElementById("bookContainer")
+    const addBookBtn = document.getElementById("addBookBtn")
+    const popup = document.getElementById("popup")
     const closePopup = document.getElementById("closePopup");
     const popupTitle = document.getElementById("popupTitle");
     const popupDescription = document.getElementById("popupDescription");
@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         { title: "Rich Dad Poor Dad", description: "A book about financial education and investing." },
         { title: "Atomic Habits", description: "A book about building good habits and breaking bad ones." }
     ];
-
     function renderBooks() {
         bookContainer.innerHTML = "";
         books.forEach((book, index) => {
