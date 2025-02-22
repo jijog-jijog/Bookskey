@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const bookContainer = document.getElementById("bookContainer");
-    const addBookBtn = document.getElementById("addBookBtn");
-    const popup = document.getElementById("popup");
+    const bookContainer = document.getElementById("bookContainer")
+    const addBookBtn = document.getElementById("addBookBtn")
+    const popup = document.getElementById("popup")
     const closePopup = document.getElementById("closePopup");
     const popupTitle = document.getElementById("popupTitle");
     const popupDescription = document.getElementById("popupDescription");
@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         { title: "Deep Work", description: "A book about focused success in a distracted world." },
         { title: "Think and Grow Rich", description: "A classic on mindset and financial success." }
     ];
-
     function renderBooks() {
         bookContainer.innerHTML = "";
         books.forEach((book, index) => {
